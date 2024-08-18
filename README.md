@@ -58,8 +58,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 Trying 142.250.186.78...
 Connected to 142.250.186.78.
 Escape character is '^]'.
- -----
-
+ 
 Current Gateway for 142.250.186.78 is 172.16.30.1
 Full line:
 142.250.186.78 via 172.16.30.1 dev ens18 src 172.16.30.125 uid 0 
