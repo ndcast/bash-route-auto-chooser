@@ -1,0 +1,11 @@
+#!/bin/bash
+tmpFile='./.inventory.tmp'
+touch $tmpFile
+IP='35.172.88.36'
+invFile='./inventory'
+gwGet() { whatGW=$(ip route get $IP | gawk '{print $3}' | xargs ); }
+gwChange() { route add -host $IP gw $GW; } 
+gwMsg() { gwGet;  echo;echo "Current Gateway for $IP is $whatGW";echo Full line:; ip route get $IP; }  
+gwDel() { route del -host $IP ; route -n; }
+gwTest() { timeout 3  telnet $IP 443; }
+echo '#priority,ip,failed_count' > $tmpFile
