@@ -7,7 +7,8 @@ Edit route-env with the desired
    - Destination IP  to be routed
    - Ammount of retries before failover
 
-Add to crontab
+Add to crontab:
+
 */1 * * * * cd /root/gw-healthcheck; bash route-auto-choose.sh >> /var/log/route-change.log
 
 Additional,
